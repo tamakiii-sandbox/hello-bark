@@ -4,7 +4,7 @@ help:
 	@cat $(firstword $(MAKEFILE_LIST))
 
 install:
-	python3 -m pip install git+https://github.com/suno-ai/bark.git
+	python3 -m poetry install
 
 uninstall:
-	python3 -m pip uninstall git+https://github.com/suno-ai/bark.git
+	rm -rf $$(python3 -m poetry env -p)
